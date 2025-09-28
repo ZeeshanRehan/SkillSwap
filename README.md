@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛠️ SkillSwap: Philly Special  
+### *"Give. Grow. Get." – A Community-Powered Skill Exchange Built for Philadelphia*
 
-## Getting Started
+---
 
-First, run the development server:
+## 🏙️ Overview
 
-```bash
+**SkillSwap** is a community-driven skill-sharing platform built for the people of Philadelphia.  
+It empowers individuals to **offer help, learn new skills, and receive support** — all while earning and spending digital tokens in a circular, trust-based ecosystem.
+
+Our mission is simple: **turn everyday acts of kindness into real-world value.**
+
+---
+
+## 🤝 The Vision
+
+Philadelphia has always thrived on mutual aid — neighbors helping neighbors, community centers feeding families, churches offering shelter, and volunteers stepping up when it matters most.
+
+**SkillSwap** amplifies that spirit by providing a digital space where these actions are recognized, rewarded, and made accessible to everyone.
+
+With SkillSwap, users can:
+
+- 📚 **Share skills**: Offer help in anything from tutoring to home repair.  
+- 💰 **Earn tokens**: Get rewarded for your time, knowledge, and effort.  
+- 🤝 **Spend tokens**: Use earned tokens when *you* need help.  
+
+It’s a **“give to get”** model — a self-sustaining community exchange.
+
+---
+
+## 🌟 Features
+
+| Feature | Description |
+|--------|-------------|
+| 📋 **Jawn Marketplace** | Post tasks, offer skills, or request help within your community. |
+| 🪙 **Token Economy** | Earn tokens for helping others and spend them when you need support. |
+| 🧑‍🚀 **XP & Levels** | Build reputation and credibility with an experience-based trust system. |
+| 🔐 **Secure Ledger** | All interactions and token transfers are logged securely for transparency. |
+| 📍 **Neighborhood Matching** | Connect with people and opportunities close to home. |
+
+---
+
+## 🔒 Trust & Safety
+
+SkillSwap uses a **secure ledger system** to record all transactions, ensuring that:
+
+- ✅ Token transfers are **transparent** and **tamper-proof**  
+- ✅ All user actions contribute to **reputation and credibility**  
+- ✅ **Malpractice is prevented** through clear and auditable histories
+
+---
+
+## 🛠️ Tech Stack
+
+The project is built with a modern, scalable JavaScript stack:
+
+- **Backend:** Node.js + Express  
+- **Frontend:** React.js + Next.js 
+- **Data Layer:** JSON (for prototyping and demos)  
+
+---
+## 🚀 How to Run
+
+Follow these steps to set up and run the project locally:
+
+---
+
+### 1. 📂 Clone the Repository
+
+Clone this repository to your local machine using:
+
+git clone https://github.com/ZeeshanRehan/SkillSwap.git
+
+### 2. 📂 Install dependencies
+
+Make sure you have node.js installed, then run the following command:
+
+npm install
+
+### 3. 📂 Run the development server
+
+Use the following command:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Your app will now be live at:
+👉 http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌟 Final Thoughts
 
-## Learn More
+Philly is more than just a city — it’s a living, breathing **community** built on resilience, kindness, and mutual support. This project is our small contribution to that powerful spirit. By combining **Web3 technology** with a **people-first mindset**, we aim to make helping each other **easier, safer, and more rewarding**.
 
-To learn more about Next.js, take a look at the following resources:
+Every action, every token, every moment shared through this platform is a step towards a stronger, more connected Philadelphia — one where **being a good neighbor isn’t just valued, it’s celebrated.**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Together, we’re not just building an app.  
+We’re building **trust, connection, and community.**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Let’s make Philly proud. 🫶🏽
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
