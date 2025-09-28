@@ -1,0 +1,16 @@
+[
+  {
+    "id": "c_g2",
+    "gigId": "g2",
+    "participants": ["u2", "u3"],
+    "createdAt": "2025-09-26T09:05:00Z",
+    "messages": [
+      { "id": "m1", "senderId": "u2", "text": "Hey! Thanks for picking this up.", "createdAt": "2025-09-26T09:06:00Z" },
+      { "id": "m2", "senderId": "u3", "text": "Got it. I can swing by at 6pm.", "createdAt": "2025-09-26T09:07:00Z" }
+    ]
+  },
+  { "id": "c_g4", "gigId": "g4", "participants": ["u2", "u1"], "createdAt": "2025-09-27T12:05:00Z", "messages": [] },
+  { "id": "c_g6", "gigId": "g6", "participants": ["u3", "u1"], "createdAt": "2025-09-27T08:20:00Z", "messages": [] },
+  { "id": "c_g9", "gigId": "g9", "participants": ["u3", "u2"], "createdAt": "2025-09-24T13:25:00Z", "messages": [] }
+]
+
