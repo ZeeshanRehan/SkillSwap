@@ -44,6 +44,7 @@
 }
 
 :root {
+  --philly-green: #004C55;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -51,18 +52,18 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: var(--philly-green);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --accent: color-mix(in oklab, white 92%, var(--philly-green) 8%);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --ring: var(--philly-green);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -118,5 +119,38 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .philly-accent {
+    --tw-ring-color: var(--philly-green);
+    --tw-shadow-color: var(--philly-green);
+  }
+  .hover-elevate {
+    @apply transition-transform transition-shadow duration-150 ease-out hover:-translate-y-0.5 hover:shadow-md;
+    box-shadow: 0 4px 16px -6px color-mix(in oklab, var(--philly-green) 35%, transparent);
+  }
+  .pressable {
+    @apply active:scale-95 transition-transform duration-100 ease-out;
+  }
+  .chip-active {
+    @apply ring-2 ring-[--philly-green]/50 bg-[color-mix(in_oklab,_white_94%,_var(--philly-green)_6%)];
+  }
+  .card-hover {
+    transition: background-color 180ms ease-out, box-shadow 180ms ease-out,
+      border-color 180ms ease-out, filter 180ms ease-out;
+  }
+  .card-hover:hover {
+    /* Fallbacks for browsers without color-mix */
+    background-color: rgba(0, 76, 85, 0.2);
+    border-color: rgba(0, 76, 85, 0.5);
+    box-shadow: 0 10px 28px -12px rgba(0, 76, 85, 0.45);
+    /* Preferred modern mix */
+    background-color: color-mix(in oklab, var(--philly-green) 14%, white);
+    border-color: color-mix(in oklab, var(--philly-green) 55%, transparent);
+    box-shadow: 0 10px 28px -12px color-mix(in oklab, var(--philly-green) 45%, transparent);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card-hover {
+      transition: none;
+    }
   }
 }

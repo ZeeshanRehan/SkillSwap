@@ -1,0 +1,145 @@
+/* UX-specific styles kept separate from globals/shadcn tokens */
+
+:root {
+  --ux-green: #004C55; /* midnight green */
+}
+
+/* Calm, premium hover for cards with readable foreground on darker bg */
+.card-hover {
+  transition: background-color 200ms ease-out, box-shadow 200ms ease-out,
+    border-color 200ms ease-out, color 200ms ease-out;
+}
+.card-hover:hover {
+  /* Fallbacks for broad support */
+  background-color: rgba(0, 76, 85, 0.95);
+  border-color: rgba(0, 76, 85, 0.6);
+  /* Green glow with a subtle black stroke to nod to Eagles colors */
+  box-shadow:
+    0 12px 32px -12px rgba(0, 76, 85, 0.50),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+/* Preferred modern mix where supported */
+@supports (color: color-mix(in oklab, white, black)) {
+  .card-hover:hover {
+    background-color: color-mix(in oklab, var(--ux-green) 95%, white);
+    border-color: color-mix(in oklab, var(--ux-green) 65%, transparent);
+    box-shadow:
+      0 14px 36px -14px color-mix(in oklab, var(--ux-green) 55%, transparent),
+      inset 0 0 0 1px color-mix(in oklab, black 28%, transparent);
+  }
+}
+
+/* Make inner content readable on darker bg */
+.card-hover:hover [data-slot=card-title],
+.card-hover:hover [data-slot=card-description],
+.card-hover:hover [data-slot=card-content],
+.card-hover:hover [data-slot=card-footer] {
+  color: rgba(255, 255, 255, 0.96);
+}
+.card-hover:hover [data-slot=badge] {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.38);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-hover { transition: none; }
+}
+
+/* Subtle fade/slide-in for lists */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-in-up { animation: fade-in-up 360ms ease-out both; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-in-up { animation: none; }
+}
+
+/* Hero visuals */
+.hero-bg {
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(0,76,85,0.12), transparent 60%),
+              radial-gradient(900px 500px at 110% 110%, rgba(0,76,85,0.10), transparent 60%),
+              linear-gradient(180deg, color-mix(in oklab, white 90%, var(--philly-green) 10%), white 60%);
+}
+.hero-badge {
+  background: rgba(0, 76, 85, 0.10);
+  border: 1px solid rgba(0, 76, 85, 0.25);
+  color: #004C55;
+}
+.hero-collage {
+  display: grid;
+  grid-template-columns: repeat(3, 56px);
+  grid-auto-rows: 56px;
+  gap: 8px;
+}
+.hero-collage img { border-radius: 10px; object-fit: cover; height: 56px; width: 56px; }
+
+/* Header gradient + scroll shadow */
+.header-gradient { background: linear-gradient(90deg, rgba(0,76,85,0.15), transparent); }
+.header-shadow { box-shadow: 0 6px 14px -10px rgba(0, 76, 85, 0.35); }
+
+/* Status badges - force readable colors on normal and hover */
+.status-open {
+  background-color: rgba(0, 76, 85, 0.85) !important; /* dark midnight green */
+  color: #e7f7f8 !important; /* light text */
+  border-color: rgba(0, 76, 85, 0.9) !important;
+}
+.status-assigned {
+  background-color: #fde68a !important; /* amber-200 */
+  color: #92400e !important; /* amber-800 */
+  border-color: #fcd34d !important; /* amber-300 */
+}
+.status-done {
+  background-color: rgba(0,0,0,0.06) !important;
+  color: rgba(0,0,0,0.6) !important;
+  border-color: transparent !important;
+}
+.card-hover:hover .status-open {
+  background-color: rgba(0, 76, 85, 0.92) !important;
+  color: #ffffff !important;
+}
+
+/* Confetti spans fall */
+.confetti-dot { position: absolute; will-change: transform, opacity; }
+
+/* Intro.js coachmarks themed with Midnight Green */
+.philly-intro-tooltip {
+  border: 1px solid rgba(0, 76, 85, 0.45) !important;
+  box-shadow: 0 18px 40px -18px rgba(0, 76, 85, 0.45), 0 0 0 1px rgba(0,0,0,0.06) !important;
+  border-radius: 12px !important;
+}
+.philly-intro-tooltip .introjs-tooltip-title {
+  color: #004C55 !important;
+  font-weight: 700 !important;
+}
+.philly-intro-tooltip .introjs-tooltiptext {
+  color: rgba(0,0,0,0.78) !important;
+}
+.philly-intro-tooltip .introjs-button {
+  border-radius: 8px !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  background: white !important;
+  color: #004C55 !important;
+}
+.philly-intro-tooltip .introjs-button.introjs-nextbutton,
+.philly-intro-tooltip .introjs-button.introjs-donebutton {
+  background: #004C55 !important;
+  color: #e7f7f8 !important;
+  border-color: #004C55 !important;
+}
+.philly-intro-tooltip .introjs-bullets li a.active,
+.philly-intro-tooltip .introjs-progress {
+  background: #004C55 !important;
+}
+.philly-intro-tooltip .introjs-skipbutton {
+  color: rgba(0,0,0,0.6) !important;
+  font-size: 11px !important;
+  padding: 2px 6px !important;
+  height: 22px !important;
+  line-height: 18px !important;
+}
+.philly-intro-highlight {
+  box-shadow: 0 0 1px 3px rgba(0, 76, 85, 0.45), 0 0 0 9999px rgba(0,0,0,0.45) !important;
+  border-radius: 10px !important;
+}
