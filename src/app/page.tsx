@@ -104,6 +104,9 @@ export default function Home() {
               Small Acts. 
               <br />Big Impact.
             </h1>
+            <div className="mt-1 text-sm font-medium text-[--philly-green]">
+              "Give. Grow. Get." – A Community-Powered Skill Exchange Built for Philadelphia
+            </div>
             <p className="mt-2 text-sm text-muted-foreground max-w-prose">
               A lightweight mutual-aid network. <br />Post what you need, pitch in where you can,
               and see your block get stronger—one exchange at a time.
