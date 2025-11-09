@@ -1,0 +1,41 @@
+[
+  {
+    "id": "u1",
+    "pfp": "/pfp/ava.jpeg",
+    "name": "Ava Thompson",
+    "bio": "Neighbor and designer who loves helping with branding.",
+    "skills": ["Design", "Figma", "Branding"],
+    "availability": "Weeknights",
+    "neighborhood": "Fishtown",
+    "xp": 120,
+    "wallet": 250,
+    "gigsListed": [],
+    "gigsDone": []
+  },
+  {
+    "id": "u2",
+    "pfp": "/pfp/ben.jpeg",
+    "name": "Ben Rivera",
+    "bio": "Handy with bikes and quick fixes.",
+    "skills": ["Bike Repair", "Handyman"],
+    "availability": "Weekends",
+    "neighborhood": "South Philly",
+    "xp": 40,
+    "wallet": 80,
+    "gigsListed": [],
+    "gigsDone": []
+  },
+  {
+    "id": "u3",
+    "pfp": "/pfp/carla.jpeg",
+    "name": "Carla Nguyen",
+    "bio": "Tutor and math nerd.",
+    "skills": ["Tutoring", "Math"],
+    "availability": "Afternoons",
+    "neighborhood": "University City",
+    "xp": 200,
+    "wallet": 150,
+    "gigsListed": [],
+    "gigsDone": []
+  }
+]
